@@ -14,18 +14,20 @@ const PostsPage = () => {
 
   const [postData, setPostData] = useState(dummydata);
   console.log("initial state", postData);
-  
+
   return (
     <div className="posts-container-wrapper">
       {/* map through data here to return a Post and pass data as props to Post */}
 
-      props.postData.map(post => {
-        return(
-          <Post key={post.timestamp} post={post} />
-        )}
+      <div className="App">
+      <SearchBarContainer />
+      <PostsContainer postData={postData}/>
+
     </div>
+
+    </div>
+
   );
 };
 
 export default PostsPage;
-

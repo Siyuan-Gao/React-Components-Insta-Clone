@@ -15,14 +15,13 @@ const CommentSection = props => {
       {/* map through the comments data and return the Comment component */}
       <CommentInput />
 
-       comments.map(eachComment => {
+     comments.map(eachComment => {
         return(
           <Comment comment={eachComment}/>
         )
       })
-      }
+      
     </div>
   );
-};
-
+}
 export default CommentSection;

@@ -4,12 +4,11 @@ import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
 
+// pass props in this file to
 import "./Posts.css";
 
-// pass props in this file to
 const Post = props => {
   // set up state for the likes
-
   const [likes, setLikes] = useState(props.post.likes);
   // console.log(props.post.likes);
   const updateLikes = e => {
@@ -17,7 +16,6 @@ const Post = props => {
     const like = likes+1;
     setLikes(like);
   }
-
   return (
     <div className="post-border">
       <PostHeader
@@ -34,7 +32,6 @@ const Post = props => {
         />
       </div>
       <LikeSection likes={likes} updateLikes={updateLikes}/>
-      
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
